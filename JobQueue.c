@@ -58,7 +58,7 @@ void Jobqueue_push (JobQueue* queue, qjnode job) {
 
     if (next == queue->first) {                                              //if queue array is full (last + 1 == first), we need to realloc the
                                                                              //queue's array
-        queue->array ;
+
         if (!(queue->array= realloc (queue->array, 2 * queue->size * sizeof(qjnode)))) {
 
             fprintf(stderr,"Error: reallocating job queue\n");
